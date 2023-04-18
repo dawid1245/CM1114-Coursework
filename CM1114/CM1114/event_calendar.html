@@ -1,0 +1,112 @@
+<!doctype html>
+    <head>
+            <title>Airsoft Society</title>
+            <link rel='stylesheet' href='css/main.css'>
+    </head>
+
+    <body>
+        <header>
+            <img id ="logo" src ="images/logo.png" alt = "Our logo"/>
+            <h1 id = "title">Airsoft Society</h1> 
+        </header>
+
+        <nav>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="current_members.html">Current Members</a></li>
+            <li class="active"><a href="event_calendar.html">Event Calendar</a></li>
+            <li><a href="img_gallery.html">Image Gallery</a></li>
+            <li><a href="online_shop.html">Online Shop</a></li>
+        </UL>
+        </nav>
+
+        <main>
+            <div>
+                <!--Here is the code responsible for setting the table up for the calendar for the semester -->
+                <table>
+                    <tr>
+                        <td></td><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th>
+                    </tr>
+                    <tr>
+                        <th>W1</th><td></td><td></td><td></td><td></td><td></td><td>Welcome back drinks <br/> In person at pub</td><td></td>
+                    </tr>
+                    <tr>
+                        <th>W2</th><td></td><td></td><td></td><td></td><td></td><td>Prep day <br/> In person at kit stores</td><td>Play day<br/> At airsoft arena</td>
+                    </tr>
+                    <tr>
+                        <th>W3</th><td>Any kit returns<br/> At kit stores</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <th>W4</th><td></td><td></td><td>Celebratory drinks <br/> At pub</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <th>W5</th><td>Shopping for gear<br/>Pickup on Campus</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <th>W6</th><td></td><td></td><td></td><td></td><td></td><td>Prep day<br/> In person at kit stores</td><td>Play Day <br/> At airsoft arena</td>
+                    </tr>
+                    <tr>
+                        <th>W7</th><td>Any kit returns<br/> At kit stores</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <th>W8</th><td></td><td></td><td>Celebratory drinks<br/>At pub</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <th>W9</th><td></td><td></td><td></td><td></td><td></td><td></td><td>Shopping for gear<br/>Pickup on Campus</td>
+                    </tr>
+                    <tr>
+                        <th>W10</th><td>Easter Break</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <th>W11</th><td>Easter break</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <th>W12</th><td></td><td></td><td></td><td></td><td>Prep day<br/>In person at kit stores</td><td>Play day 1<br/> At airsoft field</td><td>Play day 2<br/> At airsoft field</td>
+                    </tr>
+                </table>
+            </div> 
+
+            <div>
+                <form name="event">
+                    <fieldset>
+                        <legend>Want to recommend an event? Tell us below!</legend>
+                        <label id="evdesc" for="events">Please describe the event :</label>
+                        <input type="text" name="event_desc" value="" /><br>
+                        <label for="event_title">Event Name:</label>
+                        <input type="text" name="event_title" value="" id="event_title"/><br>
+                        <label for="event_date">Event Date:</label>
+                        <input type="date" name="event_date" value="" id="event_date"/><br>
+                        <button type = "button" onclick="submit_event()">Submit Event</button>
+                        <script>
+                            function submit_event() {
+                                var title = document.forms["event"]["event_title"].value;
+                                var date = document.forms["event"]["event_date"].value;
+                                if (title == "") {
+                                    alert("An event must have a title!");
+                                }
+                                else {
+                                    if (date.length == 0) {
+                                        alert("An event must have a date!");
+                                    }
+                                    else {
+                                        alert("Event submitted! The society will contact you soon!");
+                                    }
+                                }
+                            }
+                        </script>
+                            
+
+
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+
+        <aside>  </aside>
+
+                <!--This is the footer of the website and its at the bottom of every webpage-->
+
+        <footer> <p>copyright Dawid Nosorowski First Year</p> </footer>
+    </body>
+</html>
