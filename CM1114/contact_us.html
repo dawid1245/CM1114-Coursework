@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <head>
+                <!--Here is the link to the css page is and where where the code responsible for the browser knowing what the website is called is-->
+            <title>Airsoft Society</title>
+            <link rel='stylesheet' href='css/main.css'>
+    </head>
+
+    <body>
+        <header>
+                    <!--Here is the title for the webpage this is where the logo and title is-->
+            <img id ="logo" src ="images/logo.png" alt = "Our logo"/>
+            <h1 id = "title">Airsoft Society</h1> 
+        </header>
+                    <!--This is the Navigation Bar and here are all the links to the other webpages-->
+        <nav>
+            <UL>
+            <li><a href="index.html">Home</a></li>
+            <li class = "active"><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="current_members.html">Current Members</a></li>
+            <li><a href="event_calendar.html">Event Calendar</a></li>
+            <li><a href="img_gallery.html">Image Gallery</a></li>
+            <li><a href="online_shop.html">Online Shop</a></li>
+        </UL>
+        </nav>
+
+        <main>
+
+                    <!--This is the code that is responsible for splitting the page into 2 columns and for the form for contacting the society-->
+            <div class = "row">
+                <div class = column>
+                <h3>Contact Us</h3>
+                <p>Use this form to contact us</p>
+                <form>
+                    <fieldset>
+                        <legend>Contact Us Form</legend>
+                        <label for="name">Name:</label>
+                        <input type = "text" name = "name" value = "" id="name"/><br/>
+                        
+                        <label for="email">Email Address:</label>
+                        <input type = "email" name = "email" value = "" id="email"/><br/>
+                        
+                        <label for="member">Are you a member:</label>
+                        <input type = "checkbox" id = "Yes" name = "member" value = "" />
+                        <label for = "Yes">Yes</label>
+                        <input type = "checkbox" id ="No" name = "member" value = "" />
+                        <label for = "No">No</label><br/>
+
+                        <label for = "details" >Details of the reason for contacting us:</label>
+                        <input type = "text" name = "details" value = "" id="details"/><br/>
+
+                        <label for = "file">Please attach a photo of your Ukara</label>
+                        <input type = "file" name = "file" value = "" id="file"/>
+                    </fieldset>
+                    <button type="button" onclick='document.getElementById("form_outcome").innerHTML="Form has been sent successfully!"'>Submit</button>
+                </form>
+                <div><p id="form_outcome"></p></div>
+                </div>
+                <div class = column>
+                    <p>For More information please follow us on twitter @RGUAirsoftSoc</p>
+                    <img id = "twitter" src = "images/twitter.png" alt = "twitter logo">
+                </div>
+            </div>    
+        </main>
+
+        <aside>  </aside>
+
+                <!--This is the footer of the website and its at the bottom of every webpage-->
+
+        <footer> <p>copyright Dawid Nosorowski First Year</p> </footer>
+    </body>
+</html>
